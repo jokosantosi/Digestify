@@ -1,5 +1,5 @@
 {
-  "name": "digesnify-app",
+  "name": "digestify",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,13 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "next": "14.2.3"
   },
   "devDependencies": {
-    "daisyui": "^4.11.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3"
   }
 }
