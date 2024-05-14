@@ -36,6 +36,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    z-index: 99;
 }
 
 .bloc-icon {
@@ -45,6 +46,6 @@
 }
 
 .mobile-icon {
-    font-size: 30px;
+    font-size: 24px;
     color: var(--secondary-color);
 }

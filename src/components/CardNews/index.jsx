@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axiosSession from "@/libs/axiosSession";
+import { Card, Col, Row } from "react-bootstrap";
 
 const CardNews = () => {
     const [news, setNews] = useState([]);
@@ -31,21 +32,21 @@ const CardNews = () => {
     }, []);
 
     return (
-        <div>
-            {news.length > 0 ? (
-                news.map((item) => (
-                    <div key={item.id} style={{ marginBottom: "20px" }}>
-                        <a href={item.original_url} target="_blank" rel="noopener noreferrer">
-                            <h2>{item.title}</h2>
-                        </a>
-                        <img src={item.image_url} alt={item.title} style={{ width: "100%", maxHeight: "200px", objectFit: "cover" }} />
-                        <p>{item.content}</p>
-                    </div>
-                ))
-            ) : (
-                <p>No news available</p>
-            )}
-        </div>
+        <>
+            <Row>
+                {news.map((item) => (
+                    <Col xs={12} md={6} lg={4} key={item.id} className="mb-4">
+                        <Card className="p-3">
+                            <Card.Img variant="top" className="rounded" src={item.image_url} alt={item.title} />
+                            <Card.Body className="px-0">
+                                <Card.Title>{item.title}</Card.Title>
+                                <Card.Text>{item.content}</Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                ))}
+            </Row>
+        </>
     );
 };
 
