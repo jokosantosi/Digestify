@@ -5,7 +5,7 @@ const axiosSession = axios.create({
     timeout: 20000,
     headers: {
         "Content-Type": "application/json",
-    },
+    }, 
 });
 
 export default axiosSession;
