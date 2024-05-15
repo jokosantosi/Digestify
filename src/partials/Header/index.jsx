@@ -8,17 +8,19 @@ import Loading from "@/components/Loading";
 
 const MobileResolution = () => {
     return (
-        <nav className="mobile-nav">
-            <a href="#" className="bloc-icon">
-                <FaHouseChimney className="mobile-icon" />
-            </a>
-            <a href="#" className="bloc-icon">
-                <FaHeart className="mobile-icon" />
-            </a>
-            <a href="#" className="bloc-icon">
-                <IoSettingsSharp className="mobile-icon" />
-            </a>
-        </nav>
+        <header>
+            <nav className="mobile-nav">
+                <a href="#" className="bloc-icon">
+                    <FaHouseChimney className="mobile-icon" />
+                </a>
+                <a href="#" className="bloc-icon">
+                    <FaHeart className="mobile-icon" />
+                </a>
+                <a href="#" className="bloc-icon">
+                    <IoSettingsSharp className="mobile-icon" />
+                </a>
+            </nav>
+        </header>
     );
 }
 

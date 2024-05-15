@@ -5,9 +5,31 @@
 }
 
 :root {
+    --font-header: 'Montserrat', sans-serif;
+    --font-paragraph: 'Poppins', sans-serif;
+
     --primary-color: #FFFF;
     --secondary-color: #222831;
     --accent-color: #5AB2FF;
+    --item-color: #F0F0F0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-header);
+    font-weight: 700;
+}
+
+p {
+    font-family: var(--font-paragraph);
+    font-size: 14px;
+}
+
+.bg-item {
+    background-color: var(--item-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
 }
 
 .loading {
