@@ -71,3 +71,9 @@ p {
     font-size: 24px;
     color: var(--secondary-color);
 }
+
+@media (max-width: 768px) {
+    main {
+        padding-bottom: 4rem;
+    }
+}
