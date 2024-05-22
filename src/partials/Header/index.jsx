@@ -5,6 +5,7 @@ import { FaHouseChimney } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
 import Loading from "@/components/Loading";
+import { InputGroup, Form, Container } from "react-bootstrap";
 
 const MobileResolution = () => {
     return (
@@ -24,7 +25,18 @@ const MobileResolution = () => {
 
 const DesktopResolution = () => {
     return (
-        <div></div>
+        <nav className='p-3'>
+            <Container>
+                <InputGroup className="mb-3">
+                    <Form.Control
+                        placeholder="Search"
+                        aria-label="Search"
+                        aria-describedby="basic-addon1"
+                        type="search"
+                    />
+                </InputGroup>
+            </Container>
+        </nav>
     );
 }
 

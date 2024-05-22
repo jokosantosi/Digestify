@@ -62,8 +62,8 @@ const CardNews = () => {
                                 </Card.Title>
                                 <div className="d-flex justify-content-between align-items-center mb-2">
                                     <div className="d-flex gap-3 align-items-center">
-                                        {item.tag && item.tag.map((tag, tagIndex) => (
-                                            <Card.Subtitle key={tagIndex} className="bg-item px-3 py-1 rounded-3">
+                                        {item.categories && item.categories.map((tag, tagIndex) => (
+                                            <Card.Subtitle key={tagIndex} lclassName="bg-item px-3 py-1 rounded-3">
                                                 {tag}
                                             </Card.Subtitle>
                                         ))}
