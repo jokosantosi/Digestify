@@ -15,13 +15,13 @@ const CardNews = () => {
                 headers: {
                     "Accept": "application/json",
                     "Content-Type": "application/json",
-                    'ngrok-skip-browser-warning': '69420'
+                    // 'ngrok-skip-browser-warning': '69420'
                 }
             });
             setNews(response.data.data);
             
         } catch (error) {
-            console.error("Error fetching data:", error);
+            console.log("Error fetching data:", error);
         } 
     };
 
@@ -53,7 +53,7 @@ const CardNews = () => {
                             <Card.Img variant="top" className="rounded" src={item.image_url} alt={item.title} />
                             <Card.Body className="px-0">
                                 <Card.Title className="d-flex justify-content-between">
-                                    <h5 style={{ width: '94%'}}>{item.title}</h5>
+                                    <h5 style={{ width: '80%'}}>{item.title}</h5>
                                     {like[item.id] ? (
                                         <FaHeart style={{ cursor: 'pointer' }} onClick={() => handleLike(item.id)} />
                                     ) : (
@@ -61,15 +61,15 @@ const CardNews = () => {
                                     )}
                                 </Card.Title>
                                 <div className="d-flex justify-content-between align-items-center mb-2">
-                                    <div className="d-flex gap-3 align-items-center">
+                                    <div className="d-flex gap-3 align-items-center flex-wrap">
                                         {item.categories && item.categories.map((tag, tagIndex) => (
-                                            <Card.Subtitle key={tagIndex} lclassName="bg-item px-3 py-1 rounded-3">
+                                            <Card.Subtitle key={tagIndex} className="bg-item px-3 py-1 rounded-3">
                                                 {tag}
                                             </Card.Subtitle>
                                         ))}
                                     </div>
                                     <Link href={item.original_url} target="_blank" className="text-decoration-none">
-                                        <Card.Subtitle className="bg-item px-3 py-1 rounded-3 text-secondary">
+                                        <Card.Subtitle className="bg-item px-3 py-1 rounded-3 text-secondary text-nowrap">
                                             Read More
                                         </Card.Subtitle>
                                     </Link>

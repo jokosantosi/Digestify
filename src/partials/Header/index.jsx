@@ -27,14 +27,17 @@ const DesktopResolution = () => {
     return (
         <nav className='p-3'>
             <Container>
-                <InputGroup className="mb-3">
-                    <Form.Control
-                        placeholder="Search"
-                        aria-label="Search"
-                        aria-describedby="basic-addon1"
-                        type="search"
-                    />
-                </InputGroup>
+                <div className='d-flex justify-content-between align-items-center gap-3'>
+                    <h1 className='fs-3 mb-0'>Digestify</h1>
+                    <InputGroup>
+                        <Form.Control
+                            placeholder="Search"
+                            aria-label="Search"
+                            aria-describedby="basic-addon1"
+                            type="search"
+                        />
+                    </InputGroup>
+                </div>
             </Container>
         </nav>
     );
